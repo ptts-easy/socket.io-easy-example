@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Socket.io Easy Example</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>    
+    <script src="error.js"></script>
+    <script src="socket.io/socket.io.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+    <div class="container" style="height: 300px;">
+
+        <h1>Chating Example</h1>
+
+        <div class="row my-1">
+            <div class="col">
+                Name : <input id="user_name" type="text" name="name" value="" placeholder="Enter your name!">
+                <button type="button" class="btn btn-success" name="btn_change" onclick="changeUsername()">Change</button> 
+            </div>
+        </div>
+        <div class="row my-1">
+            <div class="col">
+                Room : <input id="room_name" type="text" name="room" value="" placeholder="Enter your room!">
+                <button type="button" class="btn btn-success" name="btn_join" onclick="joinRoom()">Join</button>
+            </div>
+        </div>
+        <div class="row my-1">
+            <div class="col-4">
+                Users : 
+                <ul id="user_list" class="list-group list-group-flush border border-5 rounded-3">
+                </ul>
+            </div>
+            <div class="col">
+                <div class="row">
+                    <div class="col">
+                        Send : <input id="send_msg" class="border border-5 rounded-3" type="text" name="send_msg" value="" placeholder="Enter your message!">
+                        <button type="button" class="btn btn-success" name="btn_send" onclick="sendMessage()">Send Message</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        Recv : 
+                        <div id="recv_msg" class="border border-5 rounded-3 overflow-auto" style="height: 300px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
